@@ -85,7 +85,7 @@ def install():
 
     binary = tempfile.NamedTemporaryFile()
     echo("download busybox binary...\n")
-    urllib.urlretrieve('https://github.com/tiann/super-adb/raw/master/busybox-armv6l', binary.name, reporthook=report)
+    urllib.urlretrieve('https://github.com/LNeway/super-adb/raw/master/busybox', binary.name, reporthook=report)
     echo('install busybox...\n')
     out = subprocess.check_output(
         'adb -s %s push %s /data/local/tmp/busybox' % (
